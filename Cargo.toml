@@ -1,6 +1,6 @@
 [package]
 name = "gnostr-web"
-version = "0.0.3"
+version = "0.0.4"
 edition = "2021"
 authors = ["gnostr admin@gnostr.org", "Tej Magar"]
 description = "gnostr-web: a gnostr web/hyper web service."
@@ -23,7 +23,7 @@ signal-hook = "0.3.17"
 
 tempfile = "3.10.0"
 urlencoding = "2.1.3"
-web-view = { version = "0.7.3", path = "web-view" }
+#web-view = { version = "0.7.3", path = "web-view" }
 
 [dev-dependencies]
 rand = "0.8.5"
