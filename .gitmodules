@@ -6,4 +6,4 @@
 	url = git@github.com:tejmagar/tej-protoc-rust.git
 [submodule "web-view"]
 	path = web-view
-	url = git@github.com:Boscop/web-view.git
+	url = https://github.com/randymcmillan/web-view.git
