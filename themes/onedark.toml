@@ -1,120 +1,135 @@
-# Author : Gokul Soumya <gokulps15@gmail.com>
-
-"tag" = { fg = "red" }
-"attribute" = { fg = "yellow" }
-"comment" = { fg = "light-gray", modifiers = ["italic"] }
-"constant" = { fg = "cyan" }
-"constant.numeric" = { fg = "gold" }
-"constant.builtin" = { fg = "gold" }
-"constant.character.escape" = { fg = "gold" }
+"attribute" = { fg = "violet" }
+"keyword" = { fg = "green" }
+"keyword.directive" = { fg = "orange" }
+"namespace" = { fg = "violet" }
+"operator" = { fg = "green" }
+"special" = { fg = "orange" }
+"variable.builtin" = { fg = "cyan", modifiers = ["bold"] }
+"variable.function" = { fg = "blue" }
+"type" = { fg = "yellow" }
+"type.builtin" = { fg = "yellow", modifiers = ["bold"] }
 "constructor" = { fg = "blue" }
 "function" = { fg = "blue" }
-"function.builtin" = { fg = "blue" }
-"function.macro" = { fg = "purple" }
-"keyword" = { fg = "red" }
-"keyword.control" = { fg = "purple" }
-"keyword.control.import" = { fg = "red" }
-"keyword.directive" = { fg = "purple" }
-"label" = { fg = "purple" }
-"namespace" = { fg = "blue" }
-"operator" = { fg = "purple" }
-"keyword.operator" = { fg = "purple" }
-"special" = { fg = "blue" }
-"string" = { fg = "green" }
-"type" = { fg = "yellow" }
-# "variable" = { fg = "blue" }
-"variable.builtin" = { fg = "blue" }
-"variable.parameter" = { fg = "red" }
-"variable.other.member" = { fg = "red" }
+"function.macro" = { fg = "magenta" }
+"function.builtin" = { fg = "blue", modifiers = ["bold"] }
+"function.special" = { fg = "magenta" }
+"comment" = { fg = "base01" }
+"string" = { fg = "cyan" }
+"constant" = { fg = "cyan" }
+"constant.builtin" = { fg = "cyan", modifiers = ["bold"] }
+"constant.character.escape" = { fg = "red", modifiers = ["bold"] }
+"label" = { fg = "green" }
+"module" = { fg = "violet" }
+"tag" = { fg = "magenta" }
 
-"markup.heading" = { fg = "red" }
-"markup.raw.inline" = { fg = "green" }
-"markup.bold" = { fg = "gold", modifiers = ["bold"] }
-"markup.italic" = { fg = "purple", modifiers = ["italic"] }
+# TODO
+"markup.heading" = "blue"
+"markup.list" = "red"
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "magenta", modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-"markup.list" = { fg = "red" }
-"markup.quote" = { fg = "yellow" }
-"markup.link.url" = { fg = "cyan", modifiers = ["underlined"] }
-"markup.link.text" = { fg = "purple" }
+"markup.link.url" = { fg = "yellow", modifiers = ["underlined"] }
+"markup.link.text" = "red"
+"markup.quote" = "cyan"
+"markup.raw" = "green"
 
-"diff.plus" = "green"
-"diff.delta" = "gold"
-"diff.minus" = "red"
+"diff.plus" = { fg = "green" }
+"diff.delta" = { fg = "orange" }
+"diff.minus" = { fg = "red" }
 
-"diagnostic.info".underline = { color = "blue", style = "curl" }
-"diagnostic.hint".underline = { color = "green", style = "curl" }
-"diagnostic.warning".underline = { color = "yellow", style = "curl" }
-"diagnostic.error".underline = { color = "red", style = "curl" }
+# 背景
+"ui.background" = { bg = "base03" }
+
+"ui.virtual.whitespace" = { fg = "base01" }
+"ui.virtual.inlay-hint" = { fg = "base01", modifiers = ["italic"] }
+"ui.virtual.jump-label" = { fg = "red", modifiers = ["bold"] }
+
+# 行号栏
+"ui.linenr" = { fg = "base0", bg = "base02" }
+# 当前行号栏
+"ui.linenr.selected" = { fg = "blue", modifiers = ["bold"] }
+#cursorline
+"ui.cursorline" = { bg = "base03" }
+
+# 状态栏
+"ui.statusline" = { fg = "base03", bg = "base0" }
+"ui.statusline.normal" = { bg = "blue" }
+"ui.statusline.insert" = { bg = "green" }
+"ui.statusline.select" = { bg = "yellow" }
+
+# 非活动状态栏
+"ui.statusline.inactive" = { fg = "base1", bg = "base01" }
+
+# 补全窗口, preview窗口
+"ui.popup" = { bg = "base02" }
+# 影响 补全选中 cmd弹出信息选中
+"ui.menu.selected" = { fg = "base02", bg = "base2"}
+"ui.menu" = { fg = "base0", bg = "base02" }
+# ??
+"ui.window" = { fg = "base3" }
+# 命令行 补全的帮助信息
+"ui.help" = { modifiers = ["reversed"] }
+
+# 快捷键窗口 
+"ui.popup.info" = {fg = "base02", bg = "base1", modifiers = ["bold"]}
+# 快捷键字体
+"ui.text.info" = {fg = "base02", modifiers = ["bold"]}
+
+# 普通ui的字体样式
+"ui.text" = { fg = "base1" }
+# 影响 picker列表选中, 快捷键帮助窗口文本
+"ui.text.focus" = { fg = "blue", modifiers = ["bold"]}
+
+# 主光标/selectio
+"ui.cursor.primary" = { fg = "base03", bg = "base1" }
+"ui.cursor.select" = { fg = "base02", bg = "cyan" }
+"ui.cursorline.primary" = { bg = "base02" }
+"ui.cursorline.secondary" = { bg = "base025" }
+
+"ui.selection" = { bg = "base0175" }
+"ui.selection.primary" = { bg = "base015" }
+
+"ui.virtual.indent-guide" = { fg = "base02" }
+"ui.virtual.ruler" = { bg = "base02" }
+
+# normal模式的光标
+"ui.cursor" = {fg = "base02", bg = "cyan"}
+"ui.cursor.insert" = {fg = "base03", bg = "base3"}
+# 当前光标匹配的标点符号
+"ui.cursor.match" = { fg = "base03", bg = "base00" }
+
+"warning" =  { fg = "orange", modifiers= ["bold", "underlined"] }
+"error" = { fg = "red", modifiers= ["bold", "underlined"] }
+"info" = { fg = "blue", modifiers= ["bold", "underlined"] }
+"hint" = { fg = "base01", modifiers= ["bold", "underlined"] }
+
+"diagnostic.warning" = { underline = { style = "curl", color = "orange" } }
+"diagnostic.error" = { underline = { style = "curl", color = "red" } }
+"diagnostic.info" = { underline = { style = "curl", color = "blue" } }
+"diagnostic.hint" = { underline = { style = "curl", color = "base01" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
-"info" = { fg = "blue", modifiers = ["bold"] }
-"hint" = { fg = "green", modifiers = ["bold"] }
-"warning" = { fg = "yellow", modifiers = ["bold"] }
-"error" = { fg = "red", modifiers = ["bold"] }
-
-"ui.background" = { bg = "black" }
-"ui.virtual" = { fg = "faint-gray" }
-"ui.virtual.indent-guide" = { fg = "faint-gray" }
-"ui.virtual.whitespace" = { fg = "light-gray" }
-"ui.virtual.ruler" = { bg = "gray" }
-"ui.virtual.inlay-hint" = { fg = "light-gray" }
-"ui.virtual.jump-label" = { fg = "light-gray", modifiers = ["bold"] }
-
-"ui.cursor" = { fg = "white", modifiers = ["reversed"] }
-"ui.cursor.primary" = { fg = "white", modifiers = ["reversed"] }
-"ui.cursor.match" = { fg = "blue", modifiers = ["underlined"] }
-
-"ui.selection" = { bg = "faint-gray" }
-"ui.selection.primary" = { bg = "gray" }
-"ui.cursorline.primary" = { bg = "light-black" }
-
-"ui.highlight" = { bg = "gray" }
-"ui.highlight.frameline" = { bg = "#97202a" }
-
-"ui.linenr" = { fg = "linenr" }
-"ui.linenr.selected" = { fg = "white" }
-
-"ui.statusline" = { fg = "white", bg = "light-black" }
-"ui.statusline.inactive" = { fg = "light-gray", bg = "light-black" }
-"ui.statusline.normal" = { fg = "light-black", bg = "blue", modifiers = [
-  "bold",
-] }
-"ui.statusline.insert" = { fg = "light-black", bg = "green", modifiers = [
-  "bold",
-] }
-"ui.statusline.select" = { fg = "light-black", bg = "purple", modifiers = [
-  "bold",
-] }
-
-"ui.bufferline" = { fg = "light-gray", bg = "light-black" }
-"ui.bufferline.active" = { fg = "light-black", bg = "blue", underline = { color = "light-black", style = "line" } }
-"ui.bufferline.background" = { bg = "light-black" }
-
-"ui.text" = { fg = "white" }
-"ui.text.focus" = { fg = "white", bg = "light-black", modifiers = ["bold"] }
-
-"ui.help" = { fg = "white", bg = "gray" }
-"ui.popup" = { bg = "gray" }
-"ui.window" = { fg = "gray" }
-"ui.menu" = { fg = "white", bg = "gray" }
-"ui.menu.selected" = { fg = "black", bg = "blue" }
-"ui.menu.scroll" = { fg = "white", bg = "light-gray" }
-
-"ui.debug" = { fg = "red" }
 
 [palette]
+# 深色 越来越深
+base03   = "#002b36"
+base025  = "#03303b"
+base02   = "#073642"
+base0175 = "#16404b"
+base015  = "#2c4f59"
+base01   = "#586e75"
+base00   = "#657b83"
+base0    = "#839496"
+base1    = "#93a1a1"
+base2    = "#eee8d5"
+base3    = "#fdf6e3"
 
-yellow = "#E5C07B"
-blue = "#61AFEF"
-red = "#E06C75"
-purple = "#C678DD"
-green = "#98C379"
-gold = "#D19A66"
-cyan = "#56B6C2"
-white = "#ABB2BF"
-black = "#282C34"
-light-black = "#2C323C"
-gray = "#3E4452"
-faint-gray = "#3B4048"
-light-gray = "#5C6370"
-linenr = "#4B5263"
+# 浅色 越來越浅
+yellow  = "#b58900"
+orange  = "#cb4b16"
+red     = "#dc322f"
+magenta = "#d33682"
+violet  = "#6c71c4"
+blue    = "#268bd2"
+cyan    = "#2aa198"
+green   = "#859900"
