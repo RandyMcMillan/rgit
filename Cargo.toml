@@ -7,12 +7,12 @@ authors = ["Jordan Doyle <jordan@doyle.la>"]
 license = "WTFPL"
 
 [workspace]
-members = ["tree-sitter-grammar-repository", "web"]
+members = ["tree-sitter-grammar-repository"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[[bin]]
-name = "gnit-server"
-path = "web/src/main.rs"
+#[[bin]]
+#name = "gnit-server"
+#path = "web/src/main.rs"
 
 [dependencies]
 anyhow = "1.0"
@@ -34,7 +34,7 @@ clap = { version = "4.5.20", default-features = false, features = [
 comrak = { version = "0.28.0", default-features = false }
 const-hex = "1.12"
 const_format = "0.2"
-eejit = "0.2.1"
+#eejit = "0.2.1"
 flate2 = "1.0"
 futures-util = "0.3"
 gix = { version = "0.66", default-features = false, features = [
