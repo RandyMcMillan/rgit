@@ -1,5 +1,5 @@
 name = "gnostr.org"
-port = 222
+port = 22
 
 hostname = "gnostr.org"
 
