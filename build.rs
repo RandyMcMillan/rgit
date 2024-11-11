@@ -1,6 +1,7 @@
 use std::{
     io::Write,
     path::{Path, PathBuf},
+    process::Command,
 };
 
 use anyhow::Context;
@@ -31,7 +32,13 @@ fn run() -> anyhow::Result<()> {
         statics_out_dir: &statics_out_dir,
     };
 
-    build_scss(paths).context("Failed to build CSS stylesheets")?;
+    if let Ok(output) = Command::new("git").args(["rev-parse", "HEAD"]).output() {
+        if let Ok(git_hash) = String::from_utf8(output.stdout) {
+            build_scss(paths).context("Failed to build CSS stylesheets")?;
+            println!("cargo:rerun-if-changed={git_hash}");
+            println!("cargo:rustc-env=GIT_HASH={git_hash}");
+        }
+    }
 
     Ok(())
 }
