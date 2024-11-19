@@ -68,7 +68,7 @@ table.repositories {
       }
 
       &.no-background {
-        background: $base0;
+        background: $base03;
       }
 
       &.has-parent td:first-of-type {
@@ -77,7 +77,7 @@ table.repositories {
 
       td.repo-section {
         font-style: italic;
-        color: $base00;
+        color: $blue;
       }
 
       &.separator {
@@ -96,7 +96,7 @@ table.repositories {
     font-weight: bold;
 
     @media (prefers-color-scheme: dark) {
-      color: $base2 !important;
+      color: $blue !important;
     }
   }
 }

@@ -1,12 +1,14 @@
+@import 'colours';
+
 pre.diff {
   @media (prefers-color-scheme: dark) {
-    color: #839496;
+    color: $base0;
   }
 }
 
 .diff-add-line::before, .diff-remove-line::before, .diff-context::before {
   display: inline-block;
-  color: #839496;
+  color: $base0;
   -webkit-user-select: none;
 }
 
@@ -19,28 +21,30 @@ pre.diff {
 }
 
 .diff-add-line {
-  background: #fdf6e3;
+  background: $base02;
   display: block;
 
   @media (prefers-color-scheme: dark) {
-    background: #eee8d5;
+    background: $base02;
   }
 
   &::before {
     content: '+ ';
+    color: $green
   }
 }
 
 .diff-remove-line {
-  background: #fdf6e3;
+  background: $base02;
   display: block;
 
   @media (prefers-color-scheme: dark) {
-    background: #eee8d5;
+    background: $base02;
   }
 
   &::before {
     content: '- ';
+    color: $red
   }
 }
 
