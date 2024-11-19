@@ -15,6 +15,13 @@
   }
 }
 
+a:any-link {
+color: $blue
+}
+a:any-link:active {
+color: $blue
+}
+
 body {
   font-family: sans-serif;
   font-size: 0.9rem;
