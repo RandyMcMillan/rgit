@@ -7,7 +7,7 @@
 
 table {
   @media (prefers-color-scheme: dark) {
-    color: darken($base1, 20%);
+    color: darken($base0, 0%);
   }
 
   border-collapse: collapse;
@@ -37,10 +37,10 @@ table.repositories {
     }
 
     &:hover {
-      color: $base2;
+      color: $base3;
 
       @media (prefers-color-scheme: dark) {
-        color: darken($base2, 15%);
+        color: darken($base3, 15%);
         text-decoration: underline;
       }
     }
@@ -63,12 +63,16 @@ table.repositories {
         background: $base02;
 
         @media (prefers-color-scheme: dark) {
-          background: $base01;
+          background: $base02;
         }
       }
 
       &.no-background {
-        background: $base03;
+        background: $base3;
+
+        @media (prefers-color-scheme: dark) {
+          background: $base03;
+        }
       }
 
       &.has-parent td:first-of-type {
