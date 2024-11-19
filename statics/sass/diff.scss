@@ -9,6 +9,13 @@ pre.diff {
 .diff-add-line::before, .diff-remove-line::before, .diff-context::before {
   display: inline-block;
   color: $base0;
+  background: $base3;
+
+  @media (prefers-color-scheme: dark) {
+    color: $base0;
+    background: $base03;
+  }
+
   -webkit-user-select: none;
 }
 
@@ -21,7 +28,7 @@ pre.diff {
 }
 
 .diff-add-line {
-  background: $base02;
+  background: $base3;
   display: block;
 
   @media (prefers-color-scheme: dark) {
@@ -35,7 +42,7 @@ pre.diff {
 }
 
 .diff-remove-line {
-  background: $base02;
+  background: $base3;
   display: block;
 
   @media (prefers-color-scheme: dark) {
