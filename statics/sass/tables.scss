@@ -92,6 +92,16 @@ table.repositories {
     }
 
     //commit hashes
+    th {
+      margin: 0;
+      color: $base1;
+    }
+    //commit hashes
+    td {
+      margin: 0;
+      color: $base1;
+    }
+    //commit hashes
     pre {
       margin: 0;
       color: $base1;
