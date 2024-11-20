@@ -8,6 +8,7 @@ if [ ! $(uname -s) = 'Darwin' ]; then
 		alias open='xdg-open';
 	fi
 fi
+rm -rf bins
 cargo install --path . --root .;
-./bin/rgit -d .gnostr/web 127.0.0.1:$PORT . & \
 open http://localhost:$PORT
+./bin/gnostr-web -d .gnostr/web 127.0.0.1:$PORT .
