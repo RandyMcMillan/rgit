@@ -66,7 +66,7 @@ impl Repo {
             .arg("config")
             .arg("--local")
             .arg("user.name")
-            .arg("gnostr-gnit-server")
+            .arg("Eejit Server")
             .output()
             .await?
             .status
