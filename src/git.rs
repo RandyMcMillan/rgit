@@ -1,3 +1,4 @@
+#[allow(clippy::needless_raw_string_hashes)]
 use anyhow::{anyhow, Context, Result};
 use axum::response::IntoResponse;
 use bytes::{buf::Writer, BufMut, Bytes, BytesMut};
