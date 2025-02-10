@@ -1,4 +1,5 @@
 .gnostr
+config.git
 
 #REF server.toml
 #name from public key config
