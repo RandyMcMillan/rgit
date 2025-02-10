@@ -223,7 +223,7 @@ async fn main() -> Result<(), anyhow::Error> {
 	println!("{}", &args.bind_port);
 	let socket = SocketAddr::new(IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1)), args.bind_port);
 
-    assert_eq!(socket.is_ipv4(), true);
+    assert!(socket.is_ipv4());
 
     let listener = TcpListener::bind(&socket).await?;
     let app = app.into_make_service_with_connect_info::<SocketAddr>();
