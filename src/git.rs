@@ -498,7 +498,7 @@ pub struct ArchivalVisitor<'a> {
     path: BString,
 }
 
-impl<'a> ArchivalVisitor<'a> {
+impl ArchivalVisitor<'_> {
     fn pop_element(&mut self) {
         if let Some(pos) = self.path.rfind_byte(b'/') {
             self.path.resize(pos, 0);
@@ -515,7 +515,7 @@ impl<'a> ArchivalVisitor<'a> {
     }
 }
 
-impl<'a> gix::traverse::tree::Visit for ArchivalVisitor<'a> {
+impl gix::traverse::tree::Visit for ArchivalVisitor<'_> {
     fn pop_front_tracked_path_and_set_current(&mut self) {
         self.path = self
             .path_deque
@@ -944,7 +944,7 @@ struct DiffBuilder<'a, F> {
     formatter: F,
 }
 
-impl<'a, F: DiffFormatter + Callback> DiffBuilder<'a, F> {
+impl<F: DiffFormatter + Callback> DiffBuilder<'_, F> {
     #[allow(clippy::too_many_lines)]
     fn handle(
         &mut self,
@@ -1129,7 +1129,7 @@ impl<'a> SyntaxHighlightedDiffFormatter<'a> {
     }
 }
 
-impl<'a> DiffFormatter for SyntaxHighlightedDiffFormatter<'a> {
+impl DiffFormatter for SyntaxHighlightedDiffFormatter<'_> {
     fn file_header(&self, output: &mut String, data: Arguments<'_>) {
         write!(output, r#"<span class="diff-file-header">"#).unwrap();
         write!(output, "{data}").unwrap();
@@ -1148,7 +1148,7 @@ impl<'a> DiffFormatter for SyntaxHighlightedDiffFormatter<'a> {
     }
 }
 
-impl<'a> Callback for SyntaxHighlightedDiffFormatter<'a> {
+impl Callback for SyntaxHighlightedDiffFormatter<'_> {
     fn addition(&mut self, data: &str, dst: &mut String) {
         self.write(dst, "add-line", data);
     }
