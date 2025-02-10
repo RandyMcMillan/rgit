@@ -2002,7 +2002,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "gnostr-gnit-web"
+name = "gnostr-gnit"
 version = "0.0.1"
 dependencies = [
  "anyhow",
