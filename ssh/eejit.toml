@@ -1,4 +1,4 @@
-name = "Eejit"
+name = "gnostr-gnit-server"
 public = true
-members = ["moh"]
-failed_push_message = "Issues and patches can be emailed to moh@moh.ink"
+members = ["gnostr"]
+failed_push_message = "Issues and patches can be emailed to admin@gnostr.org"
