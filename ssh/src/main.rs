@@ -1,5 +1,5 @@
 use env_logger::Env;
-use gnit_ssh::start;
+use gnostr_ssh::start;
 use log::error;
 #[tokio::main]
 async fn main() {
