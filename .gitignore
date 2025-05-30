@@ -1,3 +1,4 @@
+*.git
 .gnostr
 
 #REF server.toml
